@@ -134,7 +134,7 @@ export const GlobalStyle = createGlobalStyle`
       background-color: var(--sdc-palette-primary-main);
       font-family: var(--sdc-typography-fontFamilySystem);
     }
-
+  
     .logo {
       height: 6em;
       padding: 1.5em;
@@ -169,5 +169,58 @@ export const GlobalStyle = createGlobalStyle`
 
     .read-the-docs {
       color: #888;
+    }
+
+    [data-rfkid].rfk2_html_block.rfk2_home_hero .hero-background {
+      background-image: url(https://wwwsitecorecom.azureedge.net/-/media/sitecoresite/images/home/_/hero-v2/sitecore-home-hero-v01-052722_72dpi-small.jpg?md=20220627T131729Z);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+    [data-rfkid].rfk2_html_block.rfk2_home_hero .html_block {
+      padding-bottom: 80px;
+      padding-top: 80px;
+      position: relative;
+      z-index: 1;
+    }
+    [data-rfkid].rfk2_html_block.rfk2_home_hero .hero-content {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 10%;
+    }
+    [data-rfkid].rfk2_html_block.rfk2_home_hero .hero-main-content {
+      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(24px);
+      background: #f6f6f629;
+      border-radius: 5px;
+      box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%), inset 0 0 200px rgb(255 255 255 / 30%);
+      color: #ffffff;
+      overflow: hidden;
+      padding: 2em 3em;
+      position: relative;
+      width: 400px;
+      z-index: 1;
+    }
+    [data-rfkid].rfk2_html_block.rfk2_home_hero h1 {
+      font-size: 2.5rem;
+    }
+    [data-rfkid].rfk2_html_block.rfk2_home_hero .hero-main-content {
+      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(24px);
+      background: #f6f6f629;
+      border-radius: 5px;
+      box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%), inset 0 0 200px rgb(255 255 255 / 30%);
+      color: #ffffff;
+      overflow: hidden;
+      padding: 2em 3em;
+      position: relative;
+      width: 400px;
+      z-index: 1;
     }
 `;
