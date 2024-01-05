@@ -13,7 +13,7 @@ export const HomeHighlightedComponent = (): JSX.Element => {
     queryResult: { data: { content: articles = [] } = {} },
   } = useSearchResults({
     query: (query) => {
-      query.getRequest().setSearchFilter(new FilterEqual('type', 'Blogs'));
+      query.getRequest().setSearchFilter(new FilterEqual('type', 'website'));
 
       if (SEARCH_SOURCE != '') {
         query.getRequest().addSource(SEARCH_SOURCE) ;
@@ -27,7 +27,7 @@ export const HomeHighlightedComponent = (): JSX.Element => {
         <ArticleCard key={`${a.id}-${index}`}>
           <ArticleCardContent>
             <ArticleCardImage>{getContentIcon(a.type)}</ArticleCardImage>
-            <h3>{a.title}</h3>
+            <h3>{a.name}</h3>
             <span>{a.subtitle}</span>
           </ArticleCardContent>
         </ArticleCard>
