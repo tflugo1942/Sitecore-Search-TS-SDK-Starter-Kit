@@ -9,7 +9,7 @@ import { HTMBlockWidget } from '@sitecore-search/react';
 const Home = (): JSX.Element => {
   return (
     <>
-      <HTMBlockWidget rfkId="home_hero_russellinvestments" />
+      <HTMBlockWidget rfkId="home_hero" />
       <QuestionsAnswersWidget rfkId='rfkid_qa' />
       <HTMBlockWidget rfkId="highlight_title" />
       <HomeHighlighted rfkId="search_home_highlight_articles" />
