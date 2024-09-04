@@ -16,6 +16,7 @@ const SEARCH_CONFIG = {
 type ArticleModel = {
   id: string;
   title: string;
+  name: string;
   image_url: string;
   url: string;
   source_id?: string;
@@ -108,12 +109,12 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
                           <ArticleCard.Root className="w-full shadow-[2px_2px_4px_rgba(0,0,0,0.3)] rounded-md p-2 cursor-pointer block border-transparent border-solid border text-center focus-within:shadow-[2px_2px_4px_rgba(0,0,0,0.8)] hover:shadow-[2px_2px_4px_rgba(0,0,0,0.8)] dark:text-white">
                             <div className="m-auto mb-[10px] relative h-[6em] flex justify-center items-center overflow-hidden">
                               <ArticleCard.Image
-                                src={article.image_url}
+                                src={ article.image_url.indexOf('comundefined') === -1 ? article.image_url : 'https://media.licdn.com/dms/image/v2/D4E0BAQHmBq0F-TU2Kw/company-logo_200_200/company-logo_200_200/0/1688532419896/russell_investments_logo?e=1733356800&v=beta&t=cO3GvywmNbrlZ63P-SzkC86bWBYlWvCZ97hFDIcY44c'  }
                                 className="block w-auto max-w-full h-auto max-h-full"
                               />
                             </div>
                             <ArticleCard.Title className="max-h-[2rem] overflow-hidden m-0 mb-2 text-xs">
-                              {article.title}
+                              {article.name}
                             </ArticleCard.Title>
                           </ArticleCard.Root>
                         </PreviewSearch.ItemLink>
