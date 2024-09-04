@@ -98,7 +98,7 @@ const Header = (): JSX.Element => {
               </svg>
             </a>
           </div>
-          <div className='align-middle w-3/4 pl-[100px] z-10'>
+          <div className='align-middle w-3/4 pl-[100px] z-10 text-black'>
             <PreviewSearch rfkId="rfkid_6" />
           </div>
         </div>

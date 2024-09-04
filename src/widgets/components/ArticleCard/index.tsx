@@ -21,7 +21,7 @@ const ArticleItemCard = ({ className, article, onItemClick, index }: ArticleCard
     >
       <div className="aspect-h-1 aspect-w-1 h-28 w-full overflow-hidden rounded-t-md bg-gray-200 sm:aspect-none">
         <ArticleCard.Image
-          src={article?.image_url || DEFAULT_IMG_URL}
+          src={article.image_url.indexOf('comundefined') === -1 ? article.image_url : 'https://media.licdn.com/dms/image/v2/D4E0BAQHmBq0F-TU2Kw/company-logo_200_200/company-logo_200_200/0/1688532419896/russell_investments_logo?e=1733356800&v=beta&t=cO3GvywmNbrlZ63P-SzkC86bWBYlWvCZ97hFDIcY44c'}
           className="h-full w-full object-cover object-center lg:h-full lg:w-full"
         />
       </div>
