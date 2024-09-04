@@ -36,7 +36,7 @@ function App(): JSX.Element {
             >
               <SEOWidget rfkId={'demo_search_seo'} />
               <Header />
-              <main className="w-full m-auto pt-[100px] min-h-[700px] bg-white dark:bg-gray-700">
+              <main className="w-full m-auto min-h-[700px] bg-white dark:bg-gray-700">
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/search" element={<Search />} />
