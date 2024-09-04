@@ -69,7 +69,7 @@ export const QuestionsAnswersComponent = ({ defaultKeyphrase = '', defaultRelate
   return (
     <div>
       {((answer && question) || relatedQuestionsResponse.length > 0) && (
-        <div className="rounded-md border border-gray-200 dark:border-gray-600 p-3 my-5 shadow-md shadow-slate-300 dark:shadow-slate-500">
+        <div className="w-3/4 mx-auto rounded-md border border-gray-200 dark:border-gray-600 p-3 my-5 shadow-md shadow-slate-300 dark:shadow-slate-500">
           {answer && question && <MainQuestionComponent answer={answer} question={question} />}
           {relatedQuestionsResponse.length > 0 && (
             <RelatedQuestionsComponent relatedQuestions={relatedQuestionsResponse} />

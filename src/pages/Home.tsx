@@ -11,7 +11,7 @@ const Home = (): JSX.Element => {
     <>
       <HTMBlockWidget rfkId="home_hero_russellinvestments" />
       <QuestionsAnswersWidget rfkId='rfkid_qa' />
-      <HTMBlockWidget rfkId="highlight_title" />
+      <div className='w-3/4 mx-auto'><HTMBlockWidget rfkId="highlight_title" /></div>
       <HomeHighlighted rfkId="search_home_highlight_articles" />
     </>
   );
