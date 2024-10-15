@@ -61,7 +61,7 @@ export const QuestionsAnswersComponent = ({ defaultKeyphrase = '', defaultRelate
     },
   } = useQuestions({
     state: {
-      keyphrase: "who is russell investments",
+      keyphrase: defaultKeyphrase,
       relatedQuestions: defaultRelatedQuestions,
     },
     

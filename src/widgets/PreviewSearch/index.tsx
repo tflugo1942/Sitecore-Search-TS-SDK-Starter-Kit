@@ -19,6 +19,7 @@ type ArticleModel = {
   image_url: string;
   url: string;
   source_id?: string;
+  name: string;
 };
 
 type InitialState = PreviewSearchInitialState<'itemsPerPage' | 'suggestionsList'>;
@@ -113,7 +114,7 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
                               />
                             </div>
                             <ArticleCard.Title className="max-h-[2rem] overflow-hidden m-0 mb-2 text-xs">
-                              {article.title}
+                              {article.name}
                             </ArticleCard.Title>
                           </ArticleCard.Root>
                         </PreviewSearch.ItemLink>
