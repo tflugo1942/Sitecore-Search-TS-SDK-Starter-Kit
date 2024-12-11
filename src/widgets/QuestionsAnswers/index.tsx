@@ -64,7 +64,9 @@ export const QuestionsAnswersComponent = ({ defaultKeyphrase = '', defaultRelate
       keyphrase: defaultKeyphrase,
       relatedQuestions: defaultRelatedQuestions,
     },
-    
+    query: (query) => {
+      query.getRequest().addSource(SEARCH_CONFIG.source)
+    }
   });
   return (
     <div>
