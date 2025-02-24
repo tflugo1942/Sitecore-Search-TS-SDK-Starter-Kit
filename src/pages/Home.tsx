@@ -12,7 +12,7 @@ const Home = (): JSX.Element => {
       <HTMBlockWidget rfkId="home_hero_gilead" />
       <QuestionsAnswers
           rfkId="rfkid_qa"
-          defaultKeyphrase="what does gilead sciences do?"
+          defaultKeyphrase="what does GOJO do?"
           defaultRelatedQuestions={4}
         />
       <HTMBlockWidget rfkId="highlight_title" />
