@@ -242,7 +242,7 @@ export const SearchResultsWithLayoutOptionComponent = ({
                                 navigate(`/detail/${a.id}`);
                               }}
                             >
-                              {a.title}
+                              {a.name}
                             </ArticleCardStyled.Link>
                           </ArticleCardStyled.Title>
                           <ArticleCardStyled.Subtitle>
@@ -274,7 +274,7 @@ export const SearchResultsWithLayoutOptionComponent = ({
                                   navigate(`/detail/${a.id}`);
                                 }}
                               >
-                                {a.title}
+                                {a.name}
                               </ArticleCardRowStyled.Link>
                             </ArticleCardRowStyled.Title>
                             <ArticleCardRowStyled.Content>

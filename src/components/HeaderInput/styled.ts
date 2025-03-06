@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from '@sitecore-search/ui';
 
 export const HeaderInputWrapper = styled.div`
-  width: 70%;
+  width: 100%;
   display: flex;
 
   form {

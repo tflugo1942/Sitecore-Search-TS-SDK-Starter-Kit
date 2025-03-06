@@ -19,7 +19,7 @@ const HighlightedArticles = styled(PageSection)`
 const Home = (): JSX.Element => {
   return (
     <>
-      <HTMBlockWidget rfkId="home_hero" />
+      <HTMBlockWidget rfkId="home_hero_snhu" />
       <HomeFAQ />
       <HighlightedArticles>
         <HighlightedWrapper>

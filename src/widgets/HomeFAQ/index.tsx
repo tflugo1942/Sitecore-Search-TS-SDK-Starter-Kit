@@ -18,7 +18,7 @@ const HomeHeroWidget = (): JSX.Element => {
     },
   } = useQuestions({
     state: {
-      keyphrase: 'What is XM cloud',
+      keyphrase: 'Why is history important?',
       relatedQuestions: 3,
     },
   });
