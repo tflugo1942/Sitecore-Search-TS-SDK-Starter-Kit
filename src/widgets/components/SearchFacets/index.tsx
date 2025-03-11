@@ -45,7 +45,7 @@ const SearchFacets = ({ facets }: SearchFacetsProps) => {
   const { onFacetClick } = useSearchResultsActions();
   return (
     <SearchResultsAccordionFacets
-      defaultFacetTypesExpandedList={[]}
+      defaultFacetTypesExpandedList={['type']}
       onFacetTypesExpandedListChange={() => {}}
       onFacetValueClick={onFacetClick}
       className="w-full"
