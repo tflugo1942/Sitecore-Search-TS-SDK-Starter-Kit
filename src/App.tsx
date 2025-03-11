@@ -1,7 +1,8 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import ScrollToTop from '@/components/ScrollToTop';
 import { LanguageContext } from '@/contexts/languageContext';
 import useLanguage from '@/hooks/useLanguage';
 import '@/index.css';
@@ -27,6 +28,7 @@ function App(): JSX.Element {
     <>
       <LanguageContext.Provider value={{ language, setLanguage }}>
         <BrowserRouter>
+        <ScrollToTop />
           <div className="bg-white dark:bg-gray-700">
             <WidgetsProvider
               env={SEARCH_CONFIG.env}
@@ -41,7 +43,7 @@ function App(): JSX.Element {
                   <Route path="/" element={<Home />} />
                   <Route path="/search" element={<Search />} />
                   <Route path="/detail/:id" element={<ArticleDetail />}></Route>
-                </Routes>
+                </Routes>             
               </main>
               <Footer />
             </WidgetsProvider>
