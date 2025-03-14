@@ -10,6 +10,8 @@ import ArticleDetail from '@/pages/ArticleDetail';
 import Home from '@/pages/Home';
 import Search from '@/pages/Search';
 import { SEOWidget, WidgetsProvider } from '@sitecore-search/react';
+import Sitemap from './pages/Sitemap';
+import SitemapDisplay from './pages/SitemapPage';
 
 /**
  * Configuration object for search settings.
@@ -43,6 +45,8 @@ function App(): JSX.Element {
                   <Route path="/" element={<Home />} />
                   <Route path="/search" element={<Search />} />
                   <Route path="/detail/:id" element={<ArticleDetail />}></Route>
+                  <Route path="/sitemap-generator" element={<Sitemap />} />
+                  <Route path="/sitemap/:id" element={<SitemapDisplay />} />
                 </Routes>             
               </main>
               <Footer />
