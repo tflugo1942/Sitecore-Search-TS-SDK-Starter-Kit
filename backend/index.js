@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const generateSitemapSubset = require('./generateSubset');
+const generateSitemapSubset = require('./api/generateSubset');
 const port = 5000;
 const cors = require('cors');
 
@@ -17,6 +17,7 @@ app.use(express.json());
 
 app.post('/api/generate-subset', async (req, res) => {
   const { sitemapUrl, subsetSize } = req.body;
+  console.log(res)
 
   if (!sitemapUrl || !subsetSize) {
     return res.status(400).json({ error: 'Sitemap URL and subset size are required.' });
