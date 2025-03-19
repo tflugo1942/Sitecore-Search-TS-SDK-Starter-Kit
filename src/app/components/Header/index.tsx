@@ -3,6 +3,8 @@
 import { JSX } from 'react';
 import Logo from '@/app/components/Logo';
 import PreviewSearch from '@/app/widgets/PreviewSearch';
+import { DarkmodeSwitch } from '@/app/components/DarkModeSwitcher';
+import LocaleSelector from '@/app/components/LocaleSelector';
 import Link from 'next/link';
 
 const Header = (): JSX.Element => {
@@ -14,6 +16,8 @@ const Header = (): JSX.Element => {
               <Logo /> 
             </Link>
             <PreviewSearch rfkId="rfkid_6" />
+            <DarkmodeSwitch />
+            <LocaleSelector />
           </div>
         </div>
       </div>

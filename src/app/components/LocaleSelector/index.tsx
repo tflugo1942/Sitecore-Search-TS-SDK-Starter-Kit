@@ -14,8 +14,8 @@ const LocaleSelector = (): JSX.Element => {
     <div className="flex items-center">
       <Globe className="text-gray-400 " />
       <select className="select cursor-pointer" onChange={handleChange} defaultValue={language}>
-        {locales.map((locale) => (
-          <option value={locale.value}>{locale.label}</option>
+        {locales.map((locale, index) => (
+          <option value={locale.value} key={index}>{locale.label}</option>
         ))}
       </select>
     </div>
