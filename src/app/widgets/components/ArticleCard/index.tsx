@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import type { ActionProp, ItemClickedAction } from '@sitecore-search/react';
 import { ArticleCard } from '@sitecore-search/ui';
+import Image from 'next/image'
 
 type ArticleCardItemCardProps = {
   className?: string;
@@ -22,9 +23,12 @@ const ArticleItemCard = ({ className, article, onItemClick, index }: ArticleCard
       className={`group relative border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-lg hover:scale-105 hover:transition-all hover:ease-linear	hover:duration-300 focus-within:scale-105 focus-within:transition-all focus-within:ease-linear focus-within:duration-300 focus-within:hover:shadow-lg  ${className}`}
     >
       <div className="aspect-h-1 aspect-w-1 h-28 w-full overflow-hidden rounded-t-md bg-gray-200 sm:aspect-none">
-        <ArticleCard.Image
+        <Image
           src={article?.image_url || DEFAULT_IMG_URL}
           className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+          alt='alt'
+          width={500}
+          height={115}
         />
       </div>
       <div className="m-4 flex-col justify-between relative">

@@ -9,6 +9,7 @@ import type { PreviewSearchInitialState } from '@sitecore-search/react';
 import { WidgetDataType, usePreviewSearch, widget } from '@sitecore-search/react';
 import { ArticleCard, Presence, PreviewSearch } from '@sitecore-search/ui';
 import React from 'react';
+import Image from 'next/image'
 
 const SEARCH_CONFIG = {
   source: process.env.NEXT_PUBLIC_SEARCH_SOURCE as string,
@@ -108,9 +109,12 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
                         >
                           <ArticleCard.Root className="w-full shadow-[2px_2px_4px_rgba(0,0,0,0.3)] rounded-md p-2 cursor-pointer block border-transparent border-solid border text-center focus-within:shadow-[2px_2px_4px_rgba(0,0,0,0.8)] hover:shadow-[2px_2px_4px_rgba(0,0,0,0.8)] dark:text-white">
                             <div className="m-auto mb-[10px] relative h-[6em] flex justify-center items-center overflow-hidden">
-                              <ArticleCard.Image
+                              <Image
                                 src={article.image_url}
                                 className="block w-auto max-w-full h-auto max-h-full"
+                                alt='alt'
+                                width={200}
+                                height={100}
                               />
                             </div>
                             <ArticleCard.Title className="max-h-[2rem] overflow-hidden m-0 mb-2 text-xs">
