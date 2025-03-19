@@ -37,7 +37,7 @@ export const ArticleDetailComponent = ({ id }: ArticleDetailProps): JSX.Element 
     mainArticle = articles[0];
   }
   return (
-    <div className="max-w-[1280px] m-auto pt-10" ref={widgetRef}>
+    <div className="max-w-[1280px] m-auto pt-10">
       <div className="items-center flex justify-between">
         <div className="max-w-[50%] min-h-[300px] flex items-center flex-col">
           <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-100 w-full mb-3 mt-4">{mainArticle.name}</h1>

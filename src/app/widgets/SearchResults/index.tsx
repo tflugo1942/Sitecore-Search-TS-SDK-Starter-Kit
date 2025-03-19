@@ -86,7 +86,7 @@ export const SearchResultsComponent = ({
     );
   }
   return (
-    <div ref={widgetRef}>
+    <div>
       <div className="flex relative max-w-full px-4 text-black dark:text-gray-100 text-opacity-75">
         {isFetching && (
           <div className="w-full h-full fixed top-0 left-0 bottom-0 right-0 z-30 bg-white dark:bg-gray-800 opacity-50">
