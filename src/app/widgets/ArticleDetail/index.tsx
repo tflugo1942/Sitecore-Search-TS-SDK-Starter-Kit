@@ -17,7 +17,6 @@ type InitialState = SearchResultsInitialState<'itemsPerPage'>;
 
 export const ArticleDetailComponent = ({ id }: ArticleDetailProps): JSX.Element => {
   const {
-    widgetRef,
     queryResult: { data: { content: articles = [] } = {} },
   } = useSearchResults<ArticleModel, InitialState>({
     query: (query) => {

@@ -14,6 +14,7 @@ import Spinner from '@/app/widgets/components/Spinner';
 import { GridIcon, ListBulletIcon } from '@radix-ui/react-icons';
 import type { SearchResultsInitialState, SearchResultsStoreState } from '@sitecore-search/react';
 import { WidgetDataType, useSearchResults, widget } from '@sitecore-search/react';
+import React from 'react';
 
 const SEARCH_CONFIG = {
   source: process.env.NEXT_PUBLIC_SEARCH_SOURCE as string,
@@ -46,7 +47,6 @@ export const SearchResultsComponent = ({
   defaultItemsPerPage = 10,
 }: ArticleSearchResultsProps) => {
   const {
-    widgetRef,
     actions: { onItemClick },
     state: { sortType, page, itemsPerPage },
     queryResult: {
@@ -96,7 +96,7 @@ export const SearchResultsComponent = ({
           </div>
         )}
         {totalItems > 0 && (
-          <>
+          <React.Fragment key="1">
             <section className="flex flex-col flex-none relative mt-4 mr-8 w-[25%]">
               <Filter />
 
@@ -150,7 +150,7 @@ export const SearchResultsComponent = ({
                 <SearchPagination currentPage={page} totalPages={totalPages} />
               </div>
             </section>
-          </>
+          </React.Fragment>
         )}
         {totalItems <= 0 && !isFetching && (
           <div className="w-full flex justify-center">

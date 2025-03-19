@@ -10,7 +10,6 @@ const SEARCH_CONFIG = {
 
 export const HomeHighlightedComponent = (): JSX.Element => {
   const {
-    widgetRef,
     actions: { onItemClick },
     queryResult: { data: { content: articles = [] } = {} },
   } = useSearchResults({

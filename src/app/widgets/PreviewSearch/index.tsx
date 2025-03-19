@@ -8,6 +8,7 @@ import SuggestionBlock from '@/app/widgets/components/SuggestionBlock';
 import type { PreviewSearchInitialState } from '@sitecore-search/react';
 import { WidgetDataType, usePreviewSearch, widget } from '@sitecore-search/react';
 import { ArticleCard, Presence, PreviewSearch } from '@sitecore-search/ui';
+import React from 'react';
 
 const SEARCH_CONFIG = {
   source: process.env.NEXT_PUBLIC_SEARCH_SOURCE as string,
@@ -80,7 +81,7 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
         <Spinner loading={loading} />
 
         <Presence present={!loading}>
-          <>
+          <React.Fragment key="1">
             {articleSuggestions.length > 0 && (
               <PreviewSearch.Suggestions className="block box-border list-none w-[16rem] text-sm">
                 <SuggestionBlock blockId={'title_context_aware'} items={articleSuggestions} title={'Suggestions'} />
@@ -95,6 +96,7 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
                   <Spinner loading={loading} />
                   {!loading &&
                     articles.map((article, index) => (
+                      
                       <PreviewSearch.Item key={article.id} asChild>
                         <PreviewSearch.ItemLink
                           href={article.url}
@@ -117,11 +119,12 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
                           </ArticleCard.Root>
                         </PreviewSearch.ItemLink>
                       </PreviewSearch.Item>
+                      
                     ))}
                 </PreviewSearch.Items>
               )}
             </PreviewSearch.Results>
-          </>
+          </React.Fragment>
         </Presence>
       </PreviewSearch.Content>
     </PreviewSearch.Root>
