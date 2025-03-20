@@ -13,7 +13,7 @@ const Home = (): JSX.Element => {
       <HTMBlockWidget rfkId="home_hero" />
       <QuestionsAnswers
           rfkId="rfkid_qa"
-          defaultKeyphrase="what does gilead sciences do?"
+          defaultKeyphrase="what is sitecore?"
           defaultRelatedQuestions={2}
         />
       <HomeHighlighted rfkId="search_home_highlight_articles" />
