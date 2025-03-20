@@ -1,10 +1,17 @@
-import { useLocation } from 'react-router-dom';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 
 import { BASE_PATH } from '@/app/data/constants';
 
 const useUri = () => {
-  const location = useLocation();
-  return `${BASE_PATH}${location.pathname}${location.search}`;
+  const router = useRouter();
+  const search = useSearchParams();
+  const pathName = usePathname();
+
+  console.log("ROUTER: " + router);
+  console.log("search: " + search);
+  console.log("pathname: " + pathName);
+
+  return `${BASE_PATH}${pathName}${search}`;
 };
 
 export default useUri;

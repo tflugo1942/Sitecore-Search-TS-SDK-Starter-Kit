@@ -1,8 +1,9 @@
 import { useEffect } from "react";
- import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
  
  const ScrollToTop = () => {
-   const { pathname } = useLocation();
+   const pathname = useRouter();
  
    useEffect(() => {
      const scrollTimeout = setTimeout(() => {
@@ -11,7 +12,7 @@ import { useEffect } from "react";
  
      return () => clearTimeout(scrollTimeout);
      
-   }, [pathname]);
+   }, [pathname.pathname]);
  
    return null;
  };

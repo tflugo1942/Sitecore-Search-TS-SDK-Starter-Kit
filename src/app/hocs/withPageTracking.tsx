@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 import { ENTITY_CONTENT, PAGE_EVENTS_DEFAULT, PAGE_EVENTS_PDP } from '@/app/data/constants';
 import { PageController, trackEntityPageViewEvent, trackPageViewEvent } from '@sitecore-search/react';
-import useUri from '@/app//hooks/useUri';
+import useUri from '@/app/hooks/useUri';
 
 export const PageEventContext = React.createContext({});
 /**
@@ -19,6 +19,7 @@ const withPageTracking =
     const uri = useUri();
     const { id } = useParams();
 
+    console.log("URI: " + uri);
     useEffect(() => {
       PageController.getContext().setPageUri(uri);
 
