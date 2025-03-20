@@ -82,7 +82,7 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
       >
         <Spinner loading={loading} />
 
-        <Presence present={!loading}>
+        {!loading  &&
           <React.Fragment key="1">
             {articleSuggestions.length > 0 && (
               <PreviewSearch.Suggestions className="block box-border list-none w-[16rem] text-sm">
@@ -124,13 +124,12 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
                           </ArticleCard.Root>
                         </PreviewSearch.ItemLink>
                       </PreviewSearch.Item>
-                      
                     ))}
                 </PreviewSearch.Items>
               )}
             </PreviewSearch.Results>
           </React.Fragment>
-        </Presence>
+        }
       </PreviewSearch.Content>
     </PreviewSearch.Root>
   );
