@@ -1,10 +1,10 @@
 "use client"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from '@/app/components/Footer'
-import Header from '@/app/components/Header';
- import { LanguageContext } from '@/app/contexts/languageContext';
- import useLanguage from '@/app/hooks/useLanguage';
+import Footer from '@/app/_components/Footer'
+import Header from '@/app/_components/Header';
+ import { LanguageContext } from '@/app/_contexts/languageContext';
+ import useLanguage from '@/app/_hooks/useLanguage';
 import { SEOWidget, WidgetsProvider } from '@sitecore-search/react';
 
 const geistSans = Geist({

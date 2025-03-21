@@ -2,10 +2,10 @@
 import { JSX } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-import { PAGE_EVENTS_SEARCH } from '@/app/data/constants';
-import withPageTracking from '@/app/hocs/withPageTracking';
-import QuestionsAnswers from '@/app/widgets/QuestionsAnswers';
-import SearchResults from '@/app/widgets/SearchResults';
+import { PAGE_EVENTS_SEARCH } from '@/app/_data/constants';
+import withPageTracking from '@/app/_hocs/withPageTracking';
+import QuestionsAnswers from '@/app/_widgets/QuestionsAnswers';
+import SearchResults from '@/app/_widgets/SearchResults';
 
 const Search = (): JSX.Element => {
   const searchParams = useSearchParams();

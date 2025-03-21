@@ -1,10 +1,10 @@
 "use client"
 
 import { JSX } from 'react'
-import { PAGE_EVENTS_HOME } from '@/app/data/constants';
-import withPageTracking from '@/app/hocs/withPageTracking';
-import HomeHighlighted from '@/app/widgets/HomeHighlighted';
-import QuestionsAnswers from '@/app/widgets/QuestionsAnswers'
+import { PAGE_EVENTS_HOME } from '@/app/_data/constants';
+import withPageTracking from '@/app/_hocs/withPageTracking';
+import HomeHighlighted from '@/app/_widgets/HomeHighlighted';
+import QuestionsAnswers from '@/app/_widgets/QuestionsAnswers'
 import { HTMBlockWidget } from '@sitecore-search/react';
 
 const Home = (): JSX.Element => {

@@ -1,7 +1,7 @@
 "use client"
 import { JSX } from 'react';
 
-import footerData from '@/app/data/footer.json';
+import footerData from '@/app/_data/footer.json';
 
 const Footer = (): JSX.Element => {
   return (

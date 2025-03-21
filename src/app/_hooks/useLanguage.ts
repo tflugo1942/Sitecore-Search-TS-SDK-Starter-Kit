@@ -1,8 +1,8 @@
 "use client"
 import { useEffect } from 'react';
 
-import locales from '@/app/data/locales';
-import useStorage from '@/app/hooks/useStorage';
+import locales from '@/app/_data/locales';
+import useStorage from '@/app/_hooks/useStorage';
 import { PageController } from '@sitecore-search/react';
 
 /**

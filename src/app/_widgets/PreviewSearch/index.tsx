@@ -2,8 +2,8 @@
 import type { ChangeEvent, SyntheticEvent } from 'react';
 import { useCallback } from 'react';
 
-import Spinner from '@/app/widgets/components/Spinner';
-import SuggestionBlock from '@/app/widgets/components/SuggestionBlock';
+import Spinner from '@/app/_widgets/components/Spinner';
+import SuggestionBlock from '@/app/_widgets/components/SuggestionBlock';
 import type { PreviewSearchInitialState } from '@sitecore-search/react';
 import { WidgetDataType, usePreviewSearch, widget } from '@sitecore-search/react';
 import { ArticleCard, Presence, PreviewSearch } from '@sitecore-search/ui';

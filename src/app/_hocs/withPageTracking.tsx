@@ -3,9 +3,9 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'next/navigation';
 
-import { ENTITY_CONTENT, PAGE_EVENTS_DEFAULT, PAGE_EVENTS_PDP } from '@/app/data/constants';
+import { ENTITY_CONTENT, PAGE_EVENTS_DEFAULT, PAGE_EVENTS_PDP } from '@/app/_data/constants';
 import { PageController, trackEntityPageViewEvent, trackPageViewEvent } from '@sitecore-search/react';
-import useUri from '@/app/hooks/useUri';
+import useUri from '@/app/_hooks/useUri';
 
 export const PageEventContext = React.createContext({});
 /**

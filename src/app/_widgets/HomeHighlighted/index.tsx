@@ -1,7 +1,7 @@
 "use client"
 import { JSX } from 'react';
 
-import ArticleCard from '@/app/widgets/components/ArticleCard';
+import ArticleCard from '@/app/_widgets/components/ArticleCard';
 import { FilterEqual, WidgetDataType, useSearchResults, widget } from '@sitecore-search/react';
 
 const SEARCH_CONFIG = {

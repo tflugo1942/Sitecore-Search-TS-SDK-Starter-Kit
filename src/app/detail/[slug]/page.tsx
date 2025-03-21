@@ -3,9 +3,9 @@
 import { JSX } from 'react'
 import { useParams } from 'next/navigation';
 
-import { PAGE_EVENTS_PDP } from '@/app/data/constants';
-import withPageTracking from '@/app/hocs/withPageTracking';
-import ArticleDetailWidget from '@/app/widgets/ArticleDetail';
+import { PAGE_EVENTS_PDP } from '@/app/_data/constants';
+import withPageTracking from '@/app/_hocs/withPageTracking';
+import ArticleDetailWidget from '@/app/_widgets/ArticleDetail';
 
 const ArticleDetail = (): JSX.Element => {
   const params = useParams<{ slug: string;  }>()

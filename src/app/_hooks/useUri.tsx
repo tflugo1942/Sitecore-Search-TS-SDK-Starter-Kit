@@ -1,6 +1,6 @@
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 
-import { BASE_PATH } from '@/app/data/constants';
+import { BASE_PATH } from '@/app/_data/constants';
 
 const useUri = () => {
   const router = useRouter();

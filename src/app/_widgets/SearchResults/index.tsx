@@ -1,16 +1,16 @@
 "use client"
 import { useState } from 'react';
 
-import ArticleItemCard from '@/app/widgets/components/ArticleCard';
-import ArticleHorizontalItemCard from '@/app/widgets/components/ArticleHorizontalCard';
-import CardViewSwitcher from '@/app/widgets/components/CardViewSwitcher';
-import Filter from '@/app/widgets/components/Filter';
-import QueryResultsSummary from '@/app/widgets/components/QueryResultsSummary';
-import ResultsPerPage from '@/app/widgets/components/ResultsPerPage';
-import SearchFacets from '@/app/widgets/components/SearchFacets';
-import SearchPagination from '@/app/widgets/components/SearchPagination';
-import SortOrder from '@/app/widgets/components/SortOrder';
-import Spinner from '@/app/widgets/components/Spinner';
+import ArticleItemCard from '@/app/_widgets/components/ArticleCard';
+import ArticleHorizontalItemCard from '@/app/_widgets/components/ArticleHorizontalCard';
+import CardViewSwitcher from '@/app/_widgets/components/CardViewSwitcher';
+import Filter from '@/app/_widgets/components/Filter';
+import QueryResultsSummary from '@/app/_widgets/components/QueryResultsSummary';
+import ResultsPerPage from '@/app/_widgets/components/ResultsPerPage';
+import SearchFacets from '@/app/_widgets/components/SearchFacets';
+import SearchPagination from '@/app/_widgets/components/SearchPagination';
+import SortOrder from '@/app/_widgets/components/SortOrder';
+import Spinner from '@/app/_widgets/components/Spinner';
 import { GridIcon, ListBulletIcon } from '@radix-ui/react-icons';
 import type { SearchResultsInitialState, SearchResultsStoreState } from '@sitecore-search/react';
 import { WidgetDataType, useSearchResults, widget } from '@sitecore-search/react';

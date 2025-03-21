@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import { DEFAULT_IMAGE } from '@/app/data/constants';
+import { DEFAULT_IMAGE } from '@/app/_data/constants';
 import type { ArticleModel } from '@/app/widgets/SearchResults';
 import type { SearchResultsInitialState } from '@sitecore-search/react';
 import { FilterEqual, WidgetDataType, useSearchResults, widget } from '@sitecore-search/react';
