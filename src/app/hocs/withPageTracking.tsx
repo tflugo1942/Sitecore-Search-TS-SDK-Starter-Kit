@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'next/navigation';
 
 import { ENTITY_CONTENT, PAGE_EVENTS_DEFAULT, PAGE_EVENTS_PDP } from '@/app/data/constants';
 import { PageController, trackEntityPageViewEvent, trackPageViewEvent } from '@sitecore-search/react';
@@ -17,14 +17,13 @@ const withPageTracking =
   (Component: React.ElementType, pageType = PAGE_EVENTS_DEFAULT) =>
   (props: any) => {
     const uri = useUri();
-    const { id } = useParams();
-
-    console.log("URI: " + uri);
+    const  params = useParams<{ slug: string; }>();
+    const id = params.slug;
     useEffect(() => {
       PageController.getContext().setPageUri(uri);
 
       if (id && pageType === PAGE_EVENTS_PDP) {
-        trackEntityPageViewEvent(ENTITY_CONTENT, { items: [{ id }] });
+        trackEntityPageViewEvent(ENTITY_CONTENT, { items:  [{ id }] });
       } else {
         trackPageViewEvent(pageType);
       }
