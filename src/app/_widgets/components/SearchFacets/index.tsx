@@ -67,11 +67,11 @@ const SearchFacets = ({ facets }: SearchFacetsProps) => {
               <AccordionFacets.ValueList className="list-none mt-2 flex flex-col space-y-2">
                 {f.value.map((v, index: number) => (
                   <FacetItem
+                  key={v.id}
                     {...{
                       index,
                       facetValueId: v.id,
                     }}
-                    key={v.id}
                     className="group flex items-center text-sm cursor-pointer"
                   >
                     <AccordionFacets.ItemCheckbox className="form-checkbox flex-none w-5 h-5 border border-gray-300 rounded cursor-pointer transition duration-500 ease-in-out hover:border-heading focus:outline-gray-700 aria-checked:bg-gray-700 aria-checked:hover:bg-heading aria-checked:focus:bg-heading">
