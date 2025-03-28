@@ -12,20 +12,11 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/',
+        source: '/(.*)',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'no-store, must-revalidate',
-          },
-        ],
-      },
-      {
-        source: '/search',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'no-store, must-revalidate',
+            value: 'no-store, max-age=0',
           },
         ],
       },
