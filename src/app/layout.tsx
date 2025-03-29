@@ -6,6 +6,7 @@ import Header from '@/app/_components/Header';
  import { LanguageContext } from '@/app/_contexts/languageContext';
  import useLanguage from '@/app/_hooks/useLanguage';
 import { SEOWidget, WidgetsProvider } from '@sitecore-search/react';
+import { useEffect } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const { language, setLanguage } = useLanguage();
+  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
   return (
     <html lang="en">
       <head>
