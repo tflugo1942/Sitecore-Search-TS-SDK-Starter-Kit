@@ -2,6 +2,7 @@
 
 import { JSX } from 'react'
 import { PAGE_EVENTS_HOME } from '@/app/_data/constants';
+import { HOME_HERO_RFKID, HIGHLIGHTED_ARTICLES_RFKID, DEFAULT_QUESTION } from './_data/customizations';
 import withPageTracking from '@/app/_hocs/withPageTracking';
 import HomeHighlighted from '@/app/_widgets/HomeHighlighted';
 import QuestionsAnswers from '@/app/_widgets/QuestionsAnswers'
@@ -10,13 +11,15 @@ import { HTMBlockWidget } from '@sitecore-search/react';
 const Home = (): JSX.Element => {
   return (
     <>
-      <HTMBlockWidget rfkId="home_hero" />
-      <QuestionsAnswers
-          rfkId="rfkid_qa"
-          defaultKeyphrase="what is sitecore?"
-          defaultRelatedQuestions={2}
-        />
-      <HomeHighlighted rfkId="search_home_highlight_articles" />
+      <HTMBlockWidget rfkId={HOME_HERO_RFKID} />
+      <div className="mx-auto w-[80%]">
+        <QuestionsAnswers
+            rfkId="rfkid_qa"
+            defaultKeyphrase={DEFAULT_QUESTION}
+            defaultRelatedQuestions={2}
+          />
+      </div>  
+      <HomeHighlighted rfkId={HIGHLIGHTED_ARTICLES_RFKID} />
       </>
   );
 }

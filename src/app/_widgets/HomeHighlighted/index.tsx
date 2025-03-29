@@ -1,6 +1,6 @@
 "use client"
 import { JSX } from 'react';
-
+import { HIGHLIGHTED_ARTICLES_CONTENT_TYPE } from '@/app/_data/customizations';
 import ArticleCard from '@/app/_widgets/components/ArticleCard';
 import { FilterEqual, WidgetDataType, useSearchResults, widget } from '@sitecore-search/react';
 
@@ -14,7 +14,7 @@ export const HomeHighlightedComponent = (): JSX.Element => {
     queryResult: { data: { content: articles = [] } = {} },
   } = useSearchResults({
     query: (query) => {
-      query.getRequest().setSearchFilter(new FilterEqual('type', 'website_content'));
+      query.getRequest().setSearchFilter(new FilterEqual('type', HIGHLIGHTED_ARTICLES_CONTENT_TYPE));
 
       if (SEARCH_CONFIG.source != '') {
         query.getRequest().addSource(SEARCH_CONFIG.source);
