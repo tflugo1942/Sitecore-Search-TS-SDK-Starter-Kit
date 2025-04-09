@@ -69,10 +69,10 @@ npm i
 In the root of your new project folder, create an **.env** file, then paste the following environment variables inside.
 
 ```bash
-VITE_SEARCH_ENV=prod
-VITE_SEARCH_CUSTOMER_KEY=<INSERT CUSTOMER KEY>
-VITE_SEARCH_API_KEY=<INSERT API KEY>
-VITE_SEARCH_SOURCE=<INSERT SOURCE ID>
+NEXT_PUBLIC_SEARCH_ENV=prod
+NEXT_PUBLIC_SEARCH_CUSTOMER_KEY=<INSERT CUSTOMER KEY>
+NEXT_PUBLIC_SEARCH_API_KEY=<INSERT API KEY>
+NEXT_PUBLIC_SEARCH_SOURCE=<INSERT SOURCE ID>
 ```
 
 You will need to replace the **Customer Key** and **API Key** with the values from the Developer Resources section in the CEC domain you are leveraging. We are generally useing the domain called **Sales Engineering - AMS**.

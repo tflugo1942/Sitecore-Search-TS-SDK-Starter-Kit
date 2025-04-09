@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from '@/app/_components/Footer'
 import Header from '@/app/_components/Header';
+import DataBar from '@/app/_components/DataBar';
  import { LanguageContext } from '@/app/_contexts/languageContext';
  import useLanguage from '@/app/_hooks/useLanguage';
 import { SEOWidget, WidgetsProvider } from '@sitecore-search/react';
@@ -47,6 +48,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LanguageContext.Provider value={{ language, setLanguage }}>
+            <DataBar />
             <div className="bg-white dark:bg-gray-700">
               <WidgetsProvider 
                 env={SEARCH_CONFIG.env}
