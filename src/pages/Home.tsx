@@ -9,13 +9,13 @@ import { HTMBlockWidget } from '@sitecore-search/react';
 const Home = (): JSX.Element => {
   return (
     <>
-      <HTMBlockWidget rfkId="home_hero_gilead" />
+      <HTMBlockWidget rfkId="henry_schein_home_hero" />
       <QuestionsAnswers
           rfkId="rfkid_qa"
-          defaultKeyphrase="what does gilead sciences do?"
+          defaultKeyphrase="what products and equipment does Henry Schein have?"
           defaultRelatedQuestions={4}
         />
-      <HTMBlockWidget rfkId="highlight_title" />
+      <HTMBlockWidget rfkId="highlight_title_henryschein" />
       <HomeHighlighted rfkId="search_home_highlight_articles" />
     </>
   );
